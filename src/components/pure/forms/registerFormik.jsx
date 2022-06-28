@@ -11,6 +11,8 @@ import { User } from '../../../models/user.class';
 const Registerformik = () => {
   const { dataRegister, setDataRegister } = useContext(DataContext);
   const [registered, setRegistered] = useState(false);
+
+  /* Function for register the users with its values */
   const registerValues = (values) => {
     let user = new User(
       values.username,
@@ -130,9 +132,9 @@ const Registerformik = () => {
             <button type="submit">Register Account</button>
             {isSubmitting ? <p>Sending your credentials...</p> : null}
             {registered ? (
-              <p>User registered successfuly</p>
+              <p>User registered successfuly.</p>
             ) : (
-              <p>Please register</p>
+              <p>Please register.</p>
             )}
           </Form>
         )}

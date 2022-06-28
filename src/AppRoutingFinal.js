@@ -13,9 +13,9 @@ import Notfoundpage from './pages/404/NotFoundPage';
 import RegisterPage from './pages/auth/RegisterPage';
 
 function AppRoutingFinal() {
-  const { loggedIn } = useContext(DataContext);
   // TODO: Change to value from sessionStorage (or something dinamic)
-  console.log('logedin', loggedIn);
+  const { loggedIn } = useContext(DataContext);
+
   return (
     <Router>
       {/* Route Switch */}

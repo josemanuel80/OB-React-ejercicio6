@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { Formik, Field, Form, ErrorMessage, validateYupSchema } from 'formik';
+import { useHistory } from 'react-router-dom';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useContext } from 'react';
 import { DataContext } from '../../../context/provider';
@@ -20,7 +20,8 @@ const Loginformik = () => {
     email: '',
     password: '',
   };
-  console.log(dataRegister);
+
+  /* Function for validate the user */
   const validateUser = (values) => {
     const found = dataRegister.find((e) => {
       return e.email === values.email && e.password === values.password;
@@ -89,7 +90,9 @@ const Loginformik = () => {
             )}
             <button type="submit">Login</button>
             {isSubmitting ? <p>Login your credentials...</p> : null}
-            {incorrectLogin && <p>The user don't exist, please register</p>}
+
+            {/* Manage if the login user is incorrect */}
+            {incorrectLogin && <p>The user don't exist, please register.</p>}
           </Form>
         )}
       </Formik>
