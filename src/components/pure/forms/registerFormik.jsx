@@ -130,12 +130,8 @@ const Registerformik = () => {
             )}
 
             <button type="submit">Register Account</button>
-            {isSubmitting ? <p>Sending your credentials...</p> : null}
-            {registered ? (
-              <p>User registered successfuly.</p>
-            ) : (
-              <p>Please register.</p>
-            )}
+            {/* {isSubmitting ? <p>Sending your credentials...</p> : null} */}
+            {registered && <p>User registered successfuly.</p>}
           </Form>
         )}
       </Formik>

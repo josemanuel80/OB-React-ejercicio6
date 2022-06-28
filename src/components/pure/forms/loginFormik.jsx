@@ -89,7 +89,7 @@ const Loginformik = () => {
               <ErrorMessage name="password" component="div"></ErrorMessage>
             )}
             <button type="submit">Login</button>
-            {isSubmitting ? <p>Login your credentials...</p> : null}
+            {/*  {isSubmitting ? <p>Login your credentials...</p> : null} */}
 
             {/* Manage if the login user is incorrect */}
             {incorrectLogin && <p>The user don't exist, please register.</p>}
